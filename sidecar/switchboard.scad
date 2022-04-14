@@ -5,7 +5,7 @@ $fn = 16;
 switch_size = 14;
 
 //The amount of material around the swtich
-switch_border = 2.5;
+switch_border = 4;
 
 //The total size of each switch on the plate
 switch_outside_size = switch_size + switch_border;
@@ -59,7 +59,7 @@ board_z = 1.5;
 board_standoff_rad = 1;
 
 //Standoff Distance
-board_standoff_distance = 3;
+board_standoff_distance = 1.5;
 
 //Y Board Offset
 board_offset_y = num_switch_y * switch_outside_size + bufferspace;

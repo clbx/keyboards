@@ -86,12 +86,16 @@ translate([0, board_offset_y, switch_plate_height - board_z ]){
 //Board Plate Thickness
 board_plate_thickness = 2;
 
-
+board_plate_border_x = 10;
+board_plate_border_y = 10;
 
 //Board Plate
 translate([0, board_offset_y-bufferspace, 0 ]){
     //Board Plate
-    color("#550000") cube([board_x,board_y+bufferspace,board_plate_thickness]);
+    difference(){
+        color("#550000") cube([board_x,board_y+bufferspace,board_plate_thickness]);
+        cube([board_x-board_plate_border_x,board_y-board_plate_border_y,board_plate_thickness], center = true);
+    }
     
     //Board Stems
     for(i = [bufferspace+board_standoff_distance,bufferspace+board_y-board_standoff_distance]){
